@@ -1,26 +1,35 @@
 @import "tailwindcss";
 
+@theme {
+  --color-navy: #1a2a6c;
+  --color-blue: #2271b3;
+  --color-light-blue: #7ec8e3;
+  --color-sky: #b8e0f7;
+  --color-bg-light: #e8f4fc;
+  --color-gray-ice: #f0f6fb;
+
+  --font-display: var(--font-barlow-condensed), sans-serif;
+  --font-body: var(--font-barlow), sans-serif;
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground: #1a2a6c;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+}
+
+/* Smooth scroll dla całej strony — anchor links płynnie przewijają */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Sticky nav (~70-80px wysoki) przysłania nagłówki sekcji przy anchor scroll.
+   scroll-margin-top rekompensuje — sekcja "zatrzymuje się" pod navem. */
+section[id] {
+  scroll-margin-top: 5rem;
 }
