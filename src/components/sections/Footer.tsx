@@ -12,24 +12,24 @@ export function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer className="border-t-4 border-blue bg-navy px-6 py-8 text-center">
+    <footer className="border-t border-navy/15 bg-white px-6 py-8 text-center">
       <div className="mx-auto max-w-4xl">
         {/* Logo — klikalne, wraca do topu strony (konsystencja z Navbarem) */}
         <a
           href="#top"
-          className="font-display text-2xl font-black uppercase tracking-wide text-white transition hover:text-light-blue md:text-3xl"
+          className="font-display text-2xl font-black uppercase tracking-wide text-navy transition hover:text-blue md:text-3xl"
           aria-label="Mr IceCube — back to top"
         >
-          MR <span className="text-light-blue">ICECUBE</span>
+          MR <span>ICECUBE</span>
         </a>
 
         {/* Tagline marketingowy */}
-        <p className="mt-2 text-sm text-sky md:text-base">
+        <p className="mt-2 text-sm text-navy/70 md:text-base">
           {t("footer.sub")}
         </p>
 
         {/* Copyright z dynamicznym rokiem */}
-        <p className="mt-4 text-xs text-sky/60">
+        <p className="mt-4 text-xs text-navy/50">
           © {CURRENT_YEAR} {t("footer.copy")}
         </p>
       </div>

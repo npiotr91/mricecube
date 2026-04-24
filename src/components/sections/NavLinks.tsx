@@ -20,7 +20,7 @@ export function NavLinks() {
         <li key={link.key}>
           <a
             href={link.href}
-            className="text-sm font-semibold tracking-wide text-sky transition hover:text-white"
+            className="text-sm font-semibold tracking-wide text-navy transition hover:text-blue"
           >
             {t(link.key)}
           </a>

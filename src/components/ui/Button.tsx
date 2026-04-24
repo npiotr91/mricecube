@@ -1,6 +1,6 @@
 import type { ComponentType, ReactNode } from "react";
 
-type ButtonVariant = "primary" | "outline" | "cta";
+type ButtonVariant = "primary" | "outline" | "cta" | "outline-dark";
 
 type ButtonProps = {
   children: ReactNode;
@@ -21,6 +21,8 @@ const variantStyles: Record<ButtonVariant, string> = {
   outline:
     "bg-transparent text-white border-2 border-white hover:bg-white/15",
   cta: "bg-navy text-white border-2 border-navy hover:bg-blue hover:border-blue",
+  "outline-dark":
+    "bg-transparent text-navy border-2 border-navy hover:bg-navy hover:text-white",
 };
 
 export function Button({

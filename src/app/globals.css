@@ -10,6 +10,19 @@
 
   --font-display: var(--font-barlow-condensed), sans-serif;
   --font-body: var(--font-barlow), sans-serif;
+
+  --animate-fade-slide-up: fade-slide-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes fade-slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 :root {
@@ -32,4 +45,12 @@ html {
    scroll-margin-top rekompensuje — sekcja "zatrzymuje się" pod navem. */
 section[id] {
   scroll-margin-top: 5rem;
+}
+
+/* Szacunek dla preferencji użytkownika — wyłączenie animacji reveal
+   gdy system sygnalizuje awersję do ruchu (motion sickness, vestibular). */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-slide-up {
+    animation: none !important;
+  }
 }
